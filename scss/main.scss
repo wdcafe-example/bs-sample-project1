@@ -1,0 +1,210 @@
+// Required
+// @import "../node_modules/bootstrap/scss/functions";
+// @import "../node_modules/bootstrap/scss/variables";
+// @import "../node_modules/bootstrap/scss/variables-dark";
+// @import "../node_modules/bootstrap/scss/maps";
+// @import "../node_modules/bootstrap/scss/mixins";
+// @import "../node_modules/bootstrap/scss/root";
+
+// Bootstrap Icon 호출
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+// 필요한 부분만 호출
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// Maps and loops
+
+// 1) Modify map
+// $primary: #0cf;    // 기존 테마 칼라 변경
+
+// All these colors are available as a Sass map, $theme-colors.
+$theme-colors: ("primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark);
+
+// 2) Add to Map
+// Create your own map : 새로운 칼라 추가
+// $custom-colors: (
+//   "custom-color1": #900
+// );
+
+// Merge the maps
+// $theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+// 3) Remove from map 
+// $theme-colors: map-remove($theme-colors, "info", "light", "dark");
+// $theme-colors: map-remove($theme-colors, "custom-color1");
+
+
+// 부트스트랩 기본적인 스타일 초기화
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+
+/*  :::::::::::::::::::::::  Reset  :::::::::::::::::::::::  */
+body {
+  position: relative;
+}
+
+a {
+  color: #555;
+  text-decoration: none;
+}
+
+/* Bootstrap Reset */
+.row {
+  padding: 0;
+}
+
+/*  ::::::::::::::::::::  Navigation Area  ::::::::::::::::::::  */
+.navbar {
+  height: 60px;
+  padding: 0;
+}
+
+/* Sticky Menu 사용시 높이 설정 */
+.navbar .container-fluid>a {
+  display: inline-block;
+  height: 60px;
+  font: bold 1.2rem/60px sans-serif, arial;
+  padding: 0;
+  color: #fff;
+}
+
+/* Sticky Menu Actve Class */
+.navbar-expand-lg .navbar-nav .nav-link.active {
+  color: #fc0 !important;
+}
+
+/* Mobile Toggle Menu */
+.navbar-toggler:hover {
+  background-color: #ccc;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  width: 1.1em;
+  height: 1.1em;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Mobile Gnb */
+@media screen and (max-width: 991px) {
+  .navbar .container-fluid {
+    background-color: rgb(248, 249, 250);
+    padding: 0;
+  }
+
+  .logo {
+    margin-left: 10px;
+  }
+
+  .navbar-toggler {
+    margin-right: 7px;
+  }
+
+  .gnb {
+    padding: 20px;
+    border-top: 1px solid #e2e2e2;
+  }
+}
+
+/*  ::::::::::::::::::::  Carousel Area  ::::::::::::::::::::  */
+/* 캐러셀 슬라이드 효과 적용 */
+.carousel-item {
+  transition: transform 1s ease;
+  /* 1초 동안 부드럽게 슬라이딩 */
+}
+
+.c-item {
+  height: 800px;
+}
+
+.c-img {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial;
+  /* 기본 하단 정렬을 무시 */
+}
+
+/*  ::::::::::::::::::::  Modal Area  ::::::::::::::::::::  */
+/* 모달이 열릴 때 애니메이션 */
+.modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out;
+  transform: translateY(-100%);
+}
+
+.modal.fade.show .modal-dialog {
+  transform: translateY(0);
+}
+
+
+/*  ::::::::::::::::::::  Overview Area  ::::::::::::::::::::  */
+.overview {
+  background-color: #d3dae1;
+}
+
+.overview .col-md-4 {
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overview .col-md-4 i {
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .overview .col-md-4 {
+    flex-direction: column;
+    height: auto;
+    padding: 30px 0;
+  }
+}
+
+
+/*  ::::::::::::::::::::  Packages Area  ::::::::::::::::::::  */
+.packages .container {
+  padding: 100px 0;
+}
+
+.packages h2 {
+  margin-bottom: 50px;
+}
+
+.packages .col-sm-12 {
+  margin-bottom: 30px;
+}
+
+/*  ::::::::::::::::::::  FAQ Area  ::::::::::::::::::::  */
+.faq {
+  background-color: #f2f2f2;
+}
+
+.faq .container {
+  padding: 100px 0;
+}
+
+.faq .accordion {
+  margin-bottom: 30px;
+}

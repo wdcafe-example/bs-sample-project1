@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuroraTours - Travel with us</title>
+  <!-- 부트스트랩 아이콘 CSS 파일 포함 -->
+  <!-- <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css"> -->
+  <link rel="stylesheet" href="./scss/main.scss">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#header" data-bs-offset="50">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top bg-dark" data-bs-theme="dark" id="header">
+    <div class="container-fluid container-lg">
+
+      <a class="logo text-uppercase" href="#section1">AuroraTours</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse gnb" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#section1">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section3">Packges</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section4">FAQ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Area Start -->
+  <main>
+    <!-- Modal Area Start -->
+    <div class="modal fade" tabindex="-1" id="popup">
+      <!-- modal-dialog-centered : 모달 창을 화면 중앙에 위치시킴 -->
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Modal body text goes here.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Area End -->
+
+    <!-- Hero Area Start -->
+    <section class="hero" id="section1">
+      <!-- Carousel Area Start -->
+      <!-- 캐러셀은 터치 스크린 단말기에서의 좌우 스와이프에 의한 슬라이드 간 이동을 지원합니다. 이것은 touch 옵션을 false로 설정해서 비활성화시킬 수 있습니다. -->
+      <!-- 컴포넌트의 어두운 변형은 색상 모드가 도입된 v5.3.0에서 더 이상 사용되지 않습니다. .carousel-dark를 추가하는 대신 루트 요소, 부모 래퍼 또는 컴포넌트 자체에 data-bs-theme="dark"를 설정하세요. -->
+      <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="false"
+        data-bs-interval="4000">
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <!-- Carousel Inner -->
+        <div class="carousel-inner">
+          <div class="carousel-item active c-item">
+            <img src="./images/pexels-photo1.jpeg" class="d-block w-100 c-img" alt="Photo1">
+            <div class="carousel-caption">
+              <h5 class="display-3 fw-bold mb-3">First slide title</h5>
+              <p class="fs-6 fw-light">Some representative placeholder content for the first slide.</p>
+              <button class="btn btn-primary px-4 mt-4" data-bs-toggle="modal" data-bs-target="#popup">Book Now</button>
+            </div>
+          </div>
+          <div class="carousel-item c-item">
+            <img src="./images/pexels-photo2.jpg" class="d-block w-100 c-img" alt="Photo2">
+            <div class="carousel-caption">
+              <h5 class="display-3 fw-bold mb-3">Second slide title</h5>
+              <p class="fs-6 fw-light">Some representative placeholder content for the second slide.</p>
+              <button class="btn btn-primary px-4 mt-4" data-bs-toggle="modal" data-bs-target="#popup">Book Now</button>
+            </div>
+          </div>
+          <div class="carousel-item c-item">
+            <img src="./images/pexels-photo3.jpeg" class="d-block w-100 c-img" alt="Photo3">
+            <div class="carousel-caption">
+              <h5 class="display-3 fw-bold mb-3">Third slide title</h5>
+              <p class="fs-6 fw-light">Some representative placeholder content for the third slide.</p>
+              <button class="btn btn-primary px-4 mt-4" data-bs-toggle="modal" data-bs-target="#popup">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Control -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <!-- Hero Area End -->
+
+    <!-- Overview Area Start -->
+    <section class="overview" id="section2">
+      <div class="container">
+        <div class="row fs-4">
+          <div class="col-md-4">
+            <i class="bi bi-airplane-fill"></i>
+            Book & Relax
+          </div>
+          <div class="col-md-4"> 
+            <i class="bi bi-wallet-fill"></i>
+            Explore the World
+          </div>
+          <div class="col-md-4"> 
+            <i class="bi bi-patch-check-fill"></i>
+            Affordable
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Overview Area End -->
+
+
+    <!-- Packages Area Start -->
+    <section class="packages" id="section3">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2 class="text-center fw-bold fs-1 text-uppercase">Our Packages</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card">
+              <img src="./images/photo1.jpg" class="card-img-top" alt="Photo1">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card">
+              <img src="./images/photo2.jpg" class="card-img-top" alt="Photo2">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card">
+              <img src="./images/photo3.jpg" class="card-img-top" alt="Photo3">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3"> 
+            <div class="card">
+              <img src="./images/photo4.jpg" class="card-img-top" alt="Photo4">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div> 
+        </div>  
+      </div>
+    </section>
+    <!-- Packages Area End --> 
+
+
+    <!-- FAQ Area Start -->
+    <section class="faq" id="section4"> 
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2 class="text-center fw-bold fs-1 text-uppercase">FAQ</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Accordion Item #1
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                  <div class="accordion-body py-4">
+                    <h3 class="fs-5 fw-semibold mb-3">This is the first item's accordion body.</h3> 
+                    <p>It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Accordion Item #2
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body py-4">
+                    <h3 class="fs-5 fw-semibold mb-3">This is the second item's accordion body.</h3> 
+                    <p>It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Accordion Item #3
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body py-4">
+                    <h3 class="fs-5 fw-semibold mb-3">This is the third item's accordion body.</h3> 
+                    <p>It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ Area End -->
+  </main>
+  <!-- Main Area End -->
+
+  <!-- Footer Area Start -->
+  <footer class="bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col py-5 text-center">
+          <h2 class="fw-bold fs-1 text-uppercase">AuroraTours</h2>
+          <p>Copyright &copy; 2024 AuroraTours. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer Area End -->
+
+  <!-- jQuery Insert -->
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/my.js"></script>
+</body>
+
+</html>
