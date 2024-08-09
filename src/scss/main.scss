@@ -7,12 +7,12 @@
 // @import "../node_modules/bootstrap/scss/root";
 
 // Bootstrap Icon 호출
-@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
 // 필요한 부분만 호출
-@import "../node_modules/bootstrap/scss/functions";
-@import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
 
 // Maps and loops
 
@@ -45,7 +45,7 @@ $theme-colors: ("primary": $primary,
 
 
 // 부트스트랩 기본적인 스타일 초기화
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/bootstrap";
 
 
 
@@ -76,7 +76,6 @@ a {
   height: 60px;
   font: bold 1.2rem/60px sans-serif, arial;
   padding: 0;
-  color: #fff;
 }
 
 /* Sticky Menu Actve Class */
